@@ -5,4 +5,4 @@ ___
 
 #### Live sass compiler extension created 2 css file. css.map file we don't need to worry about, but in regular .css style file we shouldn't make any changes because those will be overwritten with any saved changes in Sass (scss) file.
 
-### Sass variables, Sass maps, Nesting
+### Sass variables, Sass maps, Nesting in Sass, Functions in Sass
