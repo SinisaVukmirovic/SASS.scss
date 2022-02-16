@@ -81,7 +81,7 @@ main section#content p {
 main section#content a {
   display: block;
   color: darked(#4662ff, 20%);
-  background-color: #f0fad4;
+  background-color: #fafc7e;
   border-radius: 1rem;
   text-decoration: none;
   text-transform: uppercase;
