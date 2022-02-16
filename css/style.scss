@@ -1,19 +1,23 @@
-html, body {
-    min-height: 100vh;
-}
-
 // Sass wariables
 // $myColor: #4662ff;
+$padding: 1rem;
+$radius: 1rem;
 
 // Sass maps
 $colors: (
     primary: #4662ff,
+    primary-light: lighten(#4662ff, 20%),
+    primary-dark: darked(#4662ff, 20%),
     accent: #f0fad4
 );
 
 // Functions in Sass
 @function color($color-name) {
     @return map-get($colors, $color-name);
+}
+
+html, body {
+    min-height: 100vh;
 }
 
 body {
@@ -39,5 +43,78 @@ body {
         top: 0;
         left: 0;
         z-index: -1;
+    }
+
+    header a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: $padding;
+    }
+}
+
+main {
+    section#card {
+        background-color: #eee;
+        padding: $padding;
+        border-radius: $radius;
+        margin: 1em auto;
+        width: 80%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            span {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: color(primary-light);
+                margin-right: 10px;
+            }
+
+            strong {
+                display: inline-block;
+                margin-left: max(40px);
+                margin-top: 10px;
+            }
+        }
+    }
+
+    section#content {
+        color: #fff;
+        padding: $padding;
+        text-align: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 1.4em;
+        }
+
+        a {
+            display: block;
+            color: color(primary-dark);
+            background-color: color(accent);
+            border-radius: $radius;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: $padding;
+            margin: 50px auto 0;
+            text-align: center;            
+        }
     }
 }
