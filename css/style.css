@@ -127,4 +127,11 @@ main section#content a {
   margin: 50px auto 0;
   text-align: center;
 }
+
+@media (min-width: 840px) {
+  main section#content a {
+    display: inline-block;
+    padding: 1rem 5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
