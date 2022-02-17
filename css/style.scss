@@ -67,6 +67,13 @@ body {
 }
 
 main {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: 
+            "content card";
+    }
+
     section#card {
         background-color: #eee;
         padding: $padding;
@@ -74,6 +81,13 @@ main {
         margin: 1em auto;
         width: 80%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+
+        @include desktop {
+            grid-area: card;
+            height: fit-content;
+            align-self: center;
+            margin: 1em;
+        }
     }
 
     ul {
@@ -106,9 +120,15 @@ main {
         padding: $padding;
         text-align: center;
 
+        @include desktop {
+            display: content;
+            text-align: left;
+            margin: 4em 0 0 4em;
+        }
+
         h1 {
-            text-transform: uppercase;
-            font-size: 2em;
+            // text-transform: uppercase;
+            font-size: 2.5em;
             margin-top: 10px;
         }
 
