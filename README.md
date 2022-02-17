@@ -5,7 +5,7 @@ ___
 
 #### Live sass compiler extension created 2 css file. css.map file we don't need to worry about, but in regular .css style file we shouldn't make any changes because those will be overwritten with any saved changes in Sass (scss) file.
 
-## Sass variables, Sass maps, Nesting in Sass, Sass funtions
+## Sass variables, Sass maps, Nesting in Sass, Sass funtions, Sass Mixins
 
 ### Variables
 ##### syntax for making and using Sass variables
@@ -22,6 +22,7 @@ body {
 <pre><code>
 $colors: (
     primary: #4662ff,
+    secondary: #abc123,
     accent: #f0fad4
 );
 
@@ -42,6 +43,13 @@ body {
 }
 </code></pre>
 
-<pre><code>
+### Sass Mixin
+##### Mixins allow you to define styles that can be re-used throughout your stylesheet.
 
+<pre><code>
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
 </code></pre>
