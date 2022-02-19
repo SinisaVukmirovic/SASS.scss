@@ -69,6 +69,19 @@ a {
           align-items: center;
 }
 
+.showcase-content img {
+  width: 50%;
+}
+
+.showcase-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.showcase-content p {
+  padding: 1.5rem 0;
+}
+
 .container {
   overflow: auto;
   max-width: 70rem;
