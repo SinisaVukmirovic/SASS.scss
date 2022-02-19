@@ -64,3 +64,23 @@ $padding: 1rem;
 
 padding: $padding $padding * 5;
 </code></pre>
+
+<pre><code>
+.showcase {
+    background-color: $primary-color;
+
+    .showcase-content {
+        height: 100%;
+    }
+}
+
+If parent and child class share the same name, the above can be written with an &-
+
+.showcase {
+    background-color: $primary-color;
+
+    &-content {
+        height: 100%;
+    }
+}
+</code></pre>
