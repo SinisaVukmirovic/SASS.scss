@@ -134,4 +134,17 @@ main section#content a {
     padding: 1rem 5rem;
   }
 }
+
+main .other-courses {
+  color: #fafc7e;
+  margin: 2rem auto 2rem 5rem;
+  padding: 1rem 2rem;
+  border: 2px solid #fafc7e;
+  border-radius: 1rem;
+}
+
+main .other-courses a {
+  color: #eee;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
