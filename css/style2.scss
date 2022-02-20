@@ -1,7 +1,20 @@
 $font-stack: Arial, Helvetica, sans-serif;
 $light-color: #f4f4f4;
-$primary-color: #0e6cff;
+// $primary-color: #0e6cff;
+$primary-color: #abcdef;
 $secondary-color: #ff8700;
+
+// Sass function to set the color of text based on color of the background
+// by using conditionals
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return #333;
+    }
+    @else {
+        @return #eee;
+
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -25,7 +38,8 @@ a {
 
 .showcase {
     background-color: $primary-color;
-    color: #fff;
+    // color: #fff;
+    color: set-text-color($primary-color);
     height: 40rem;
 
     nav {
@@ -48,7 +62,8 @@ a {
     }
 
     a {
-        color: #fff;
+        // color: #fff;
+        color: set-text-color($primary-color);
     }
 
     &-content {
@@ -80,3 +95,25 @@ a {
     margin: 0 auto;
     padding: 0 2rem;
 }
+
+.btn {
+    display: inline-block;
+    border-radius: .25rem;
+    padding: .5rem 1.5rem;
+    margin: .25rem;
+
+    &:hover {
+        transform: scale(.98);
+    }
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: lighten($primary-color, 15%);
+}
+.btn-secondary {
+    @extend .btn;
+    background-color: $secondary-color;
+    
+}
+
