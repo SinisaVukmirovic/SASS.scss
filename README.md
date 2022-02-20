@@ -5,7 +5,7 @@ ___
 
 #### Live sass compiler extension created 2 css file. css.map file we don't need to worry about, but in regular .css style file we shouldn't make any changes because those will be overwritten with any saved changes in Sass (scss) file.
 
-## Sass variables, Sass maps, Nesting in Sass, Sass funtions, Sass Mixins, Math in Sass
+## Sass variables, Sass maps, Nesting in Sass, Sass funtions, Sass Mixins, Math in Sass, Detecting BG clr to set TEXT clr
 
 ### Variables
 ##### syntax for making and using Sass variables
@@ -65,6 +65,7 @@ $padding: 1rem;
 padding: $padding $padding * 5;
 </code></pre>
 
+##### If parent and child class share the same name, the above can be written with an &-
 <pre><code>
 .showcase {
     background-color: $primary-color;
@@ -74,13 +75,28 @@ padding: $padding $padding * 5;
     }
 }
 
-If parent and child class share the same name, the above can be written with an &-
-
 .showcase {
     background-color: $primary-color;
 
     &-content {
         height: 100%;
     }
+}
+</code></pre>
+
+### Detecting BG clr to set TEXT clr
+
+<pre><code>
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return #333;
+    }
+    @else {
+        @return #eee;
+    }
+}
+
+.showcase {
+    @include set-background($primary-color);
 }
 </code></pre>

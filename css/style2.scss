@@ -1,7 +1,7 @@
 $font-stack: Arial, Helvetica, sans-serif;
 $light-color: #f4f4f4;
-// $primary-color: #0e6cff;
-$primary-color: #abcdef;
+$primary-color: #0e6cff;
+// $primary-color: #abcdef;
 $secondary-color: #ff8700;
 
 // Sass function to set the color of text based on color of the background
@@ -14,6 +14,12 @@ $secondary-color: #ff8700;
         @return #eee;
 
     }
+}
+
+// Mixin to est text clr and bh clr
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
 }
 
 * {
@@ -38,9 +44,10 @@ a {
 
 .showcase {
     background-color: $primary-color;
-    // color: #fff;
-    color: set-text-color($primary-color);
     height: 40rem;
+    // color: #fff;
+    // color: set-text-color($primary-color);
+    @include set-background($primary-color);
 
     nav {
         display: flex;
@@ -109,11 +116,12 @@ a {
 
 .btn-primary {
     @extend .btn;
-    background-color: lighten($primary-color, 15%);
+    // background-color: lighten($primary-color, 15%);
+    @include set-background(lighten($primary-color, 15%));
 }
 .btn-secondary {
     @extend .btn;
-    background-color: $secondary-color;
-    
+    // background-color: $secondary-color;
+    @include set-background($secondary-color);
 }
 

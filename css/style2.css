@@ -20,9 +20,10 @@ a {
 }
 
 .showcase {
-  background-color: #abcdef;
-  color: #333;
+  background-color: #0e6cff;
   height: 40rem;
+  background-color: #0e6cff;
+  color: #eee;
 }
 
 .showcase nav {
@@ -53,7 +54,7 @@ a {
 }
 
 .showcase a {
-  color: #333;
+  color: #eee;
 }
 
 .showcase-content {
@@ -102,10 +103,12 @@ a {
 }
 
 .btn-primary {
-  background-color: #ebf3fb;
+  background-color: #5b9bff;
+  color: #eee;
 }
 
 .btn-secondary {
   background-color: #ff8700;
+  color: #eee;
 }
 /*# sourceMappingURL=style2.css.map */
