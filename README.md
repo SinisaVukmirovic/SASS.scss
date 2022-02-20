@@ -5,7 +5,7 @@ ___
 
 #### Live sass compiler extension created 2 css file. css.map file we don't need to worry about, but in regular .css style file we shouldn't make any changes because those will be overwritten with any saved changes in Sass (scss) file.
 
-## Sass variables, Sass maps, Nesting in Sass, Sass funtions, Sass Mixins, Math in Sass, Detecting BG clr to set TEXT clr
+## Sass variables, Sass maps, Nesting in Sass, Sass funtions, Sass Mixins, Math in Sass, Detecting BG clr to set TEXT clr, Sass Each loops
 
 ### Variables
 ##### syntax for making and using Sass variables
@@ -98,5 +98,29 @@ padding: $padding $padding * 5;
 
 .showcase {
     @include set-background($primary-color);
+}
+</code></pre>
+
+### Each loops in Sass
+##### Sass will create multiple classes based on the classnames used in HTML markup
+<pre><code>
+$spaceamount: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamount {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
 }
 </code></pre>
