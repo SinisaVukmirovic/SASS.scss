@@ -101,7 +101,7 @@ a {
 
 .showcase {
   background-color: #0e6cff;
-  height: 40rem;
+  height: 45rem;
   background-color: #0e6cff;
   color: #eee;
 }
@@ -148,6 +148,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5rem;
 }
 
 .showcase-content img {
@@ -190,5 +191,17 @@ a {
 .btn-secondary {
   background-color: #ff8700;
   color: #eee;
+}
+
+@media (max-width: 700px) {
+  .showcase {
+    height: 35rem;
+  }
+  .showcase-content {
+    text-align: center;
+  }
+  .showcase-content img {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style2.css.map */
